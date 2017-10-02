@@ -1,4 +1,4 @@
-# fnhde
+# react-redux-quickstart
 This is a project to kickstart a `react` `redux` environment with proper setup, `testing` and `linting`.
 
 This setup uses a non-sessioned, very simplistic version of a google signing via `react-google-login` component and serves as a basic example for architecture for a scaling project.
