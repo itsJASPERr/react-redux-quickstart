@@ -13,7 +13,7 @@ v6.11.3
 ```
 fork or clone this project, install, start
 ```
-git clone git@github.com:itsJASPERr/fnhde.git kickstart-project
+git clone git@github.com:itsJASPERr/react-redux-quickstart.git kickstart-project
 cd kickstart-project
 npm install
 npm start
