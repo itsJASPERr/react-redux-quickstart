@@ -5,6 +5,8 @@ import logo from "./react-logo.svg";
 import Login from "./auth/_container/LoginContainer";
 import auth from "./auth";
 import "./App.css";
+import { Route, Redirect, withRouter } from "react-router";
+import { Link } from "react-router-dom";
 
 export class App extends Component {
   render() {
@@ -14,14 +16,20 @@ export class App extends Component {
           <img src={ logo } className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        {
-          !this.props.isAuthenticated &&
-          <Login />
-        }
-        {
-          this.props.isAuthenticated &&
-          <p>Hi, { this.props.profile.name } from Google </p>
-        }
+        <Route
+          path="/login"
+          render={ () => this.props.isAuthenticated ?
+            (<Redirect to="/" />) :
+            (<Login />)
+          }
+        />
+        <Route
+          exact path="/"
+          render={ () => this.props.isAuthenticated ?
+            (<p>Hi, { this.props.profile.name } from Google </p>) :
+            (<Link to="/login">Go To Login</Link>)
+          }
+        />
       </div>
     );
   }
@@ -50,4 +58,4 @@ const AppContainer = connect(
   mapDispatchToProps,
 )(App);
 
-export default AppContainer;
+export default withRouter(AppContainer);

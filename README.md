@@ -11,19 +11,31 @@ $ npm -v
 $ node -v
 v6.11.3
 ```
-fork or clone this project, install, start
+fork or clone this project
 ```
 git clone git@github.com:itsJASPERr/react-redux-quickstart.git kickstart-project
 cd kickstart-project
+```
+paste your google dev client id
+```
+// in ./src/constants.js
+export const GOOGLE_CLIENT_ID = "your client id";
+```
+install, start
+```
 npm install
 npm start
 ```
+
+# working status
+## react-router
+I just started integrating `react-router`, the newest version, which recently got a heavy rework compared to the last major one. In the current implementation of `react-router` everything is a react component and enables dynamic routing. These specification require one to deeply integrate Router in ones code - if a lot of routing is to be implemented from a lot of custom components and their sub components. This is my fear with the current concept, however, and I don't know how to feel about this yet. Is it a good thing, or a bad? How is this supposed to be handled in a scaling application? How does the separation of `react-router` into native, web, and core influence a cross-platform integration?
 
 # roadmap
 | Version | Goals / Features | status |
 |---------|------------------|-----------|
 | 0.1.0 | react redux linting test setup | implemented |
-| 0.2.0 |  | in planning |
+| 0.2.0 | integration of react router | wip |
 | 0.3.0 |  | in planning |
 
 - integration of react router

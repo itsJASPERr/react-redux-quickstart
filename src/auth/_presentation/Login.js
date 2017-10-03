@@ -1,6 +1,7 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import GoogleLogin from "react-google-login";
+import { GOOGLE_CLIENT_ID } from "../../constants";
 
 export default class Login extends PureComponent {
   constructor(props) {
@@ -16,6 +17,7 @@ export default class Login extends PureComponent {
     this.props.onGoogleResponse(event);
   }
 
+  // component based error handling
   componentDidCatch(error, info) {
     this.setState({
       hasError: true,
@@ -25,24 +27,38 @@ export default class Login extends PureComponent {
   }
 
   render() {
-    // tood this could be a global app wrapper
-    // or be implemented as a component wrapper => component based errors
     if (this.state.hasError) {
       return <span>Error</span>;
     }
     return (
-      <GoogleLogin
-        clientId="983294396646-krmfgsjtqcalpij46im4j5do2j1psdlk.apps.googleusercontent.com"
-        buttonText="Login"
-        onSuccess={ this.onGoogleResponse }
-        onFailure={ this.onGoogleResponse }
-      />
+      <div>
+        {
+          this.props.error &&
+          <div>
+            ERROR: <br />
+            { this.props.error.code }
+            <br />
+            { this.props.error.details }
+          </div>
+        }
+        {
+          // missing or wrong client id
+          (!this.props.error || (this.props.error && this.props.error.code !== "idpiframe_initialization_failed")) &&
+          <GoogleLogin
+            clientId={ GOOGLE_CLIENT_ID }
+            buttonText="Login"
+            onSuccess={ this.onGoogleResponse }
+            onFailure={ this.onGoogleResponse }
+          />
+        }
+      </div>
     );
   }
 }
 
 Login.propTypes = {
   onGoogleResponse: PropTypes.func.isRequired,
+  error: PropTypes.any,
 };
 
 Login.defaultProps = {};

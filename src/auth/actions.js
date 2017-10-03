@@ -22,7 +22,7 @@ export const loginWithGoogle = (event) => (dispatch) => Promise.resolve()
     const tokenId = event.tokenObj && event.tokenObj.id_token ?
       event.tokenObj.id_token : undefined; // otken object.id
     if (!profile && !tokenId) {
-      dispatch(dispatch(authFailed(event.code, event.details)));
+      dispatch(dispatch(authFailed(event.error, event.details)));
     } else {
       dispatch(authSuccessful(tokenId, profile));
     }

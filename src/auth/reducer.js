@@ -1,7 +1,7 @@
 import * as type from "./actionTypes";
 
 const initialState = {
-  error:   {},
+  error:   undefined,
   loading: false,
   token:   "",
   profile: {},

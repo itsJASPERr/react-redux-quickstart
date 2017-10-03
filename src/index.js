@@ -8,6 +8,10 @@ import thunk from "redux-thunk";
 import { applyMiddleware, createStore } from "redux";
 import { Provider } from "react-redux";
 import rootReducer from "./rootReducer";
+import { Router } from "react-router";
+
+// eslint-disable-next-line import/no-extraneous-dependencies
+import createBrowserHistory from "history/createBrowserHistory";
 
 const isDev = () => process.env.NODE_ENV !== "production";
 
@@ -16,11 +20,13 @@ const middleware = isDev() ?
   applyMiddleware(thunk);
 
 const store = createStore(rootReducer, middleware);
-
+const history = createBrowserHistory();
 
 ReactDOM.render(
   <Provider store={ store }>
-    <App />
+    <Router history={ history }>
+      <App />
+    </Router>
   </Provider>,
   document.getElementById("root"),
 );
