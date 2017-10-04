@@ -8,7 +8,9 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  onGoogleResponse: (event) => dispatch(a.loginWithGoogle(event)),
+  onRequest: () => dispatch(a.authRequest()),
+  onSuccess: (event) => dispatch(a.authSuccessful(event)),
+  onFailure: (e) => dispatch(a.authFailed(e)),
 });
 
 const LoginContainer = connect(

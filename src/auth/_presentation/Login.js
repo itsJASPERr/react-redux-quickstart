@@ -6,15 +6,10 @@ import { GOOGLE_CLIENT_ID } from "../../constants";
 export default class Login extends PureComponent {
   constructor(props) {
     super(props);
-    this.onGoogleResponse = this.onGoogleResponse.bind(this);
     this.state = {
       hasError: false,
       error: "",
       info: "" };
-  }
-
-  onGoogleResponse(event) {
-    this.props.onGoogleResponse(event);
   }
 
   // component based error handling
@@ -46,9 +41,9 @@ export default class Login extends PureComponent {
           (!this.props.error || (this.props.error && this.props.error.code !== "idpiframe_initialization_failed")) &&
           <GoogleLogin
             clientId={ GOOGLE_CLIENT_ID }
-            buttonText="Login"
-            onSuccess={ this.onGoogleResponse }
-            onFailure={ this.onGoogleResponse }
+            onRequest={ this.props.onRequest }
+            onSuccess={ this.props.onSuccess }
+            onFailure={ this.props.onFailure }
           />
         }
       </div>
@@ -57,8 +52,10 @@ export default class Login extends PureComponent {
 }
 
 Login.propTypes = {
-  onGoogleResponse: PropTypes.func.isRequired,
-  error: PropTypes.any,
+  onRequest:  PropTypes.func.isRequired,
+  onSuccess:  PropTypes.func.isRequired,
+  onFailure:  PropTypes.func.isRequired,
+  error:      PropTypes.any,
 };
 
 Login.defaultProps = {};
