@@ -5,10 +5,9 @@ export const authRequest = () => ({
   payload: {},
 });
 
-export const authSuccessful = (event) => {
-  const profile = event.profileObj ? event.profileObj : undefined;
-  const token = event.tokenObj && event.tokenObj.id_token ?
-    event.tokenObj.id_token : undefined; // otken object.id
+export const authSuccessful = (response) => {
+  const profile = response.profileObj;
+  const token = response.tokenObj.access_token;
   return {
     type: type.AUTH_SUCCESSFUL,
     payload: { token, profile },
