@@ -3,6 +3,7 @@
 [![Build Status Linux](https://travis-ci.org/itsJASPERr/react-redux-quickstart.svg?branch=master)](https://travis-ci.org/itsJASPERr/react-redux-quickstart)
 [![Build status Windows](https://ci.appveyor.com/api/projects/status/q0le60y3ie63m2w5/branch/master?svg=true)](https://ci.appveyor.com/project/itsJASPERr/react-redux-quickstart/branch/master)
 [![Coverage Status](https://coveralls.io/repos/github/itsJASPERr/react-redux-quickstart/badge.svg?branch=master)](https://coveralls.io/github/itsJASPERr/react-redux-quickstart?branch=master)
+[![Dependency status](https://www.versioneye.com/user/projects/59d5da440fb24f0046190db9/badge.svg)](https://www.versioneye.com/user/projects/59d5da440fb24f0046190db9)
 
 This is a project to kickstart a `react` `redux` environment with proper setup, `testing` and `linting`.
 
