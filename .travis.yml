@@ -1,5 +1,7 @@
 language: node_js
-node_js: "8"
+node_js:
+  - "6"
+  - "8"
 os:
   - linux
   - osx
@@ -9,4 +11,6 @@ cache:
     - node_modules
 script:
   - npm run build
-  - npm test
+  - npm test -- --coverage
+after_success:
+  - coveralls < coverage/lcov.info
