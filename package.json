@@ -19,6 +19,7 @@
     "redux-thunk": "2.2.0"
   },
   "devDependencies": {
+    "coveralls": "3.0.0",
     "eslint": "4.8.0",
     "eslint-config-dacz": "^0.13.3",
     "eslint-plugin-jest": "^21.2.0",
