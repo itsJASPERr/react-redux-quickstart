@@ -4,6 +4,8 @@
 [![Build status Windows](https://ci.appveyor.com/api/projects/status/q0le60y3ie63m2w5/branch/master?svg=true)](https://ci.appveyor.com/project/itsJASPERr/react-redux-quickstart/branch/master)
 [![Coverage Status](https://coveralls.io/repos/github/itsJASPERr/react-redux-quickstart/badge.svg?branch=master)](https://coveralls.io/github/itsJASPERr/react-redux-quickstart?branch=master)
 [![Dependency status](https://www.versioneye.com/user/projects/59d5da440fb24f0046190db9/badge.svg)](https://www.versioneye.com/user/projects/59d5da440fb24f0046190db9)
+[![codebeat badge](https://codebeat.co/badges/53627ae5-79a0-474b-bda4-9fcadf67f1e3)](https://codebeat.co/projects/github-com-itsjasperr-react-redux-quickstart-master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0e2a8cea741c43afa6fb90fef37d3a5e)](https://www.codacy.com/app/itsJASPERr/react-redux-quickstart?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=itsJASPERr/react-redux-quickstart&amp;utm_campaign=Badge_Grade)
 
 This is a project to kickstart a `react` `redux` environment with proper setup, `testing` and `linting`.
 
