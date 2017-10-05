@@ -1,4 +1,8 @@
 # react-redux-quickstart
+[![License](https://img.shields.io/github/license/itsJASPERr/react-redux-quickstart.svg)](https://github.com/itsJASPERr/react-redux-quickstart/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/itsJASPERr/react-redux-quickstart.svg?branch=master)](https://travis-ci.org/itsJASPERr/react-redux-quickstart)
+[![Coverage Status](https://coveralls.io/repos/github/itsJASPERr/react-redux-quickstart/badge.svg?branch=master)](https://coveralls.io/github/itsJASPERr/react-redux-quickstart?branch=master)
+
 This is a project to kickstart a `react` `redux` environment with proper setup, `testing` and `linting`.
 
 This setup uses a non-sessioned, very simplistic version of a google signing via `react-google-login` component and serves as a basic example for architecture for a scaling project.

@@ -3,6 +3,7 @@
   "version": "0.2.0",
   "private": false,
   "license": "MIT",
+  "homepage": "https://github.com/itsJASPERr/react-redux-quickstart",
   "dependencies": {
     "classnames": "2.2.5",
     "prop-types": "15.6.0",
