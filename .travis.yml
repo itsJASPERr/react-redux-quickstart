@@ -4,4 +4,9 @@ os:
   - linux
   - osx
 dist: trusty
-script: npm test
+cache:
+  directories:
+    - node_modules
+script:
+  - npm run build
+  - npm test -- --coverage
